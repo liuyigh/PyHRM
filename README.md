@@ -15,5 +15,5 @@ http://nbviewer.ipython.org/github/liuyigh/PyHRM/blob/master/PyHRM.ipynb
 
 * Precision Melt from Bio-Rad: $3,455
 * GenEx: EUR€595 - 2,495
-* Life Technologies: $794, 1 lisence
+* Life Technologies: $794, 1 license
 * [uAnalyze](https://dna.utah.edu/uv/uanalyze.html): Does not support Bio-Rad CFX platforms
