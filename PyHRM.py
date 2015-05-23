@@ -10,7 +10,7 @@
 
 # ### Import Python modules for analysis
 
-# In[64]:
+# In[ ]:
 
 get_ipython().magic(u'matplotlib inline')
 
@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 
 # ### Read and Plot Melting Data
 
-# In[65]:
+# In[ ]:
 
 df = pd.read_csv('Sample-HRM-p50-genotyping.csv')
 plt.plot(df[[0]],df.ix[:,1:])
@@ -30,7 +30,7 @@ plt.show()
 
 # ### Select melting range
 
-# In[74]:
+# In[ ]:
 
 df_melt=df.ix[(df.iloc[:,0]>75) & (df.iloc[:,0]<89)]
 df_data=df_melt.ix[:,1:]
@@ -40,7 +40,7 @@ plt.show()
 
 # ### Normalizing 
 
-# In[73]:
+# In[ ]:
 
 df_norm= (df_data - df_data.min()) / (df_data.max()-df_data.min())*100
 plt.plot(df_melt[[0]],df_norm)
@@ -49,7 +49,7 @@ plt.show()
 
 # ### Calculate and Show Diff Plot 
 
-# In[68]:
+# In[ ]:
 
 dfdif = df_norm.sub(df_norm['J14'],axis=0)
 plt.plot(df_melt[[0]],dfdif)
@@ -60,13 +60,13 @@ plt.show()
 
 # Use KMeans module from SciKit-Learn to cluster your sample into three groups (WT, KO, HET). Be careful, your samples may have less than three groups. So always check the diff plots first.
 
-# In[69]:
+# In[ ]:
 
 import sklearn.cluster as sc
 from IPython.display import display
 
 
-# In[70]:
+# In[ ]:
 
 mat = dfdif.T.as_matrix()
 hc = sc.KMeans(n_clusters=3)
