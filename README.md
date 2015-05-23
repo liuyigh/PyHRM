@@ -7,6 +7,10 @@ You can view this ipython notebook here:
 
 http://nbviewer.ipython.org/github/liuyigh/PyHRM/blob/master/PyHRM.ipynb
 
+## Basics: HRM - High Resolution Melt Analysis
+
+[Kapa BioSystems HRM Guide](http://www.kapabiosystems.com/document/introduction-high-resolution-melt-analysis-guide/)
+
 ## Other Software
 
 * Precision Melt from Bio-Rad: $3,455
