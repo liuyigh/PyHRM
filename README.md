@@ -7,6 +7,17 @@ You can view this ipython notebook demo here:
 
 https://github.com/liuyigh/PyHRM/blob/master/PyHRM.ipynb
 
+## How sensitive is pyHRM?
+
+I am able to reliably detect:
+* nfkb1-/- genetyping: WT vs HET vs KO; using original regular PCR primer
+* an amplicon in nfkb2 gene that have single point T->G mutation: WT vs HET vs KO
+* an amplicon in nfkb2 gene that have 4 base pair "TCCA" loss mutation: WT vs HET vs KO
+
+## Reagents
+
+## qPCR protocol
+
 ## Basics: HRM - High Resolution Melt Analysis
 
 [Kapa BioSystems HRM Guide](http://www.kapabiosystems.com/document/introduction-high-resolution-melt-analysis-guide/)
