@@ -86,7 +86,17 @@ display(results.ix[:0,results.ix[1]==2])
 # 
 # So you can identify your genotyping results by looking at: to which control they cluster.
 
+# Ploting with plot.ly, so you can look at individual lines for better pattern recognition
 # In[ ]:
+import plotly.plotly as py
+import cufflinks as cf
+import plotly.graph_objs as go
 
+cf.set_config_file(offline=False, world_readable=True, theme='ggplot')
+
+dfpy = dfdif.set_index(df_melt.iloc[:,0])
+
+# Plot and embed in ipython notebook!
+dfpy.iplot(kind='scatter', filename='pyHRM')
 
 

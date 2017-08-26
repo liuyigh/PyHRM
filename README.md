@@ -7,6 +7,18 @@ You can view this ipython notebook demo here:
 
 https://github.com/liuyigh/PyHRM/blob/master/PyHRM.ipynb
 
+## FAQ
+
+### Clustering not working.
+
+When you get noisy data, the k-means is not going to magically salvage it. Try these:
+
+* Do your PCR with touch down protocol, it greatly improves data quality, like magic!
+* Make sure you get rid off empty wells, failed wells (look at your melting curve peaks), obvious outliers
+* Make sure you choose the best temp range +/- 5 degree C around melting temp usually works the best.
+* For subtle differences, your eyes can be better at pattern recognition than k-means. Use the provided code to plot it with `plot.ly`. You can look at individual lines on plot.ly to make your own judgement.
+* Reduce heat block variation by running only 1 target gene in symatrically arranged wells.
+
 ## How sensitive is pyHRM?
 
 I am able to reliably detect:
@@ -17,6 +29,8 @@ I am able to reliably detect:
 ## Reagents
 
 ## qPCR protocol
+
+Do your PCR with **touch down** protocol, it greatly improves data quality, like magic!
 
 ## Basics: HRM - High Resolution Melt Analysis
 
