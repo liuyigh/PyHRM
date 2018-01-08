@@ -24,7 +24,7 @@ import matplotlib.pyplot as plt
 # In[ ]:
 
 df = pd.read_csv('Sample-HRM-p50-genotyping.csv')
-plt.plot(df[[0]],df.ix[:,1:])
+plt.plot(df.iloc[:,[0]],df.iloc[:,1:])
 plt.show()
 
 
@@ -32,9 +32,9 @@ plt.show()
 
 # In[ ]:
 
-df_melt=df.ix[(df.iloc[:,0]>75) & (df.iloc[:,0]<89)]
-df_data=df_melt.ix[:,1:]
-plt.plot(df_melt[[0]],df_data)
+df_melt=df.loc[(df.iloc[:,0]>75) & (df.iloc[:,0]<89)]
+df_data=df_melt.iloc[:,1:]
+plt.plot(df_melt.iloc[:,[0]],df_data)
 plt.show()
 
 
@@ -43,7 +43,7 @@ plt.show()
 # In[ ]:
 
 df_norm= (df_data - df_data.min()) / (df_data.max()-df_data.min())*100
-plt.plot(df_melt[[0]],df_norm)
+plt.plot(df_melt.iloc[:,[0]],df_norm)
 plt.show()
 
 
@@ -52,7 +52,7 @@ plt.show()
 # In[ ]:
 
 dfdif = df_norm.sub(df_norm['J14'],axis=0)
-plt.plot(df_melt[[0]],dfdif)
+plt.plot(df_melt.iloc[:,[0]],dfdif)
 plt.show()
 
 
@@ -74,9 +74,9 @@ hc.fit(mat)
 
 labels = hc.labels_
 results = pd.DataFrame([dfdif.T.index,labels])
-display(results.ix[:0,results.ix[1]==0])
-display(results.ix[:0,results.ix[1]==1])
-display(results.ix[:0,results.ix[1]==2])
+display(results.loc[:0,results.iloc[1]==0])
+display(results.loc[:0,results.iloc[1]==1])
+display(results.loc[:0,results.iloc[1]==2])
 
 
 # My controls are 
