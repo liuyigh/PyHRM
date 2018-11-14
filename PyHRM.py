@@ -68,7 +68,7 @@ from IPython.display import display
 
 # In[ ]:
 
-mat = dfdif.T.as_matrix()
+mat = dfdif.T.values
 hc = sc.KMeans(n_clusters=3)
 hc.fit(mat)
 
