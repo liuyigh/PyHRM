@@ -28,6 +28,14 @@ I am able to reliably detect:
 
 ## Reagents
 
+I normally use Bio-Rad SsoAdvanced™ Universal SYBR® Green Supermix. Lately, I tried PowerUp SYBR Green Master Mix from Thermo / Life Technologies. I found the PowerUp mix:
+
+* give better melting cureve differences when it works
+* may not work for certain amplicons
+* less efficient (higher Ct)
+
+So it may be worth to try a couple of SYBR reagents for trouble shooting.
+
 ## qPCR protocol
 
 Do your PCR with **touch down** protocol, it greatly improves data quality, like magic!
