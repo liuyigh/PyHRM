@@ -9,6 +9,14 @@ https://github.com/liuyigh/PyHRM/blob/master/PyHRM.ipynb
 
 ## FAQ
 
+### Required Packages
+
+The file *environment.yml* contains a list of packages with which the code has been tested. The code might also run with different versions of the mentioned packages but this has not been tested. If you are using *conda* as a package manager you can use the following on the console to create a Python environment for running the code:
+
+```
+conda env create -f environment.yml
+```
+
 ### Clustering not working.
 
 When you get noisy data, the k-means is not going to magically salvage it. Try these:
