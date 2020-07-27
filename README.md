@@ -7,6 +7,8 @@ You can view this ipython notebook demo here:
 
 https://github.com/liuyigh/PyHRM/blob/master/PyHRM.ipynb
 
+The PyHRM.py file is a script you can run in Spyder or your favorite IDE instead of a Jupyter Notebook.
+
 ## FAQ
 
 ### Clustering not working.
