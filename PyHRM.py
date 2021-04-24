@@ -46,6 +46,14 @@ df_norm= (df_data - df_data.min()) / (df_data.max()-df_data.min())*100
 plt.plot(df_melt.iloc[:,[0]],df_norm)
 plt.show()
 
+# ### Melting temp
+
+dfdt = df_norm.diff()
+plt.plot(df_melt.iloc[:,[0]],dfdt)
+plt.show()
+
+dfdtWithTemp = pd.concat([df_melt.iloc[:,[0]],dfdt],axis=1)
+meltTempList = dfdtWithTemp.set_index('Temperature').idxmin()
 
 # ### Calculate and Show Diff Plot 
 
