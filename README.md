@@ -1,13 +1,24 @@
-# PyHRM
-High Resolution Melt Analysis in Python
+# PyHRM version 1.1 (russian adaptation)
+## North-Eastern Federal University in Yakutsk, Molecular Medicine and Human Genetics lab, Department of Proteomics and Gene Editing 
 
-I am surprised that no free software is available to do such simple data analysis. So with some opensource spirit, I decide to write my own and share it with fellow scientists.
+High Resolution Melt Analysis in Python 
 
-You can view this ipython notebook demo here:
+Demo is on duty.
 
-https://github.com/liuyigh/PyHRM/blob/master/PyHRM.ipynb
+The PyHRM.py can be run in Jupyter Notebook.
 
-The PyHRM.py file is a script you can run in Spyder or your favorite IDE instead of a Jupyter Notebook.
+contributed by https://github.com/liuyigh/PyHRM
+
+# Issues solved in v1.1
+
+## 1. Issues with delimiter on Russian CFX data
+### - delimiter set to ";"
+
+## 2. Data type for pandas
+### - data type changed from "object" to "float"
+
+## 3. Issues with dots 
+### - comma is used as a decimal separator on Russian data sets instead of a point
 
 ## FAQ
 
@@ -21,34 +32,18 @@ When you get noisy data, the k-means is not going to magically salvage it. Try t
 * For subtle differences, your eyes can be better at pattern recognition than k-means. Use the provided code to plot it with `plot.ly`. You can look at individual lines on plot.ly to make your own judgement.
 * Reduce heat block variation by running only 1 target gene in symatrically arranged wells.
 
-## How sensitive is pyHRM?
-
-I am able to reliably detect:
-* nfkb1-/- genetyping: WT vs HET vs KO; using original regular PCR primer
-* an amplicon in nfkb2 gene that have single point T->G mutation: WT vs HET vs KO
-* an amplicon in nfkb2 gene that have 4 base pair "TCCA" loss mutation: WT vs HET vs KO
-
 ## Reagents
 
-I normally use Bio-Rad SsoAdvanced™ Universal SYBR® Green Supermix. Lately, I tried PowerUp SYBR Green Master Mix from Thermo / Life Technologies. I found the PowerUp mix:
-
-* give better melting cureve differences when it works
-* may not work for certain amplicons
-* less efficient (higher Ct)
-
-So it may be worth to try a couple of SYBR reagents for trouble shooting.
+We are used SYBR Green reagents on our samples folder.
 
 ## qPCR protocol
 
-Do your PCR with **touch down** protocol, it greatly improves data quality, like magic!
-
-## Basics: HRM - High Resolution Melt Analysis
-
-[Kapa BioSystems HRM Guide](http://www.kapabiosystems.com/document/introduction-high-resolution-melt-analysis-guide/)
+PCR protocal is developing. There are evidence that incresing melting temperature around 5-10 C on PCR will make better performance on data (https://pubmed.ncbi.nlm.nih.gov/29717053/)
 
 ## Other Software
 
 * Precision Melt from Bio-Rad: $3,455
 * GenEx: EUR€595 - 2,495
 * Life Technologies: $794, 1 license
-* [uAnalyze](https://dna.utah.edu/uv/uanalyze.html): Does not support Bio-Rad CFX platforms
+* [uAnalyze](https://dna.utah.edu/uv/uanalyze.html): Does not support Bio-Rad CFX platforms, but if change csv file to tabular delimiter it should work fine
+* There is another HRM script on R to be investigated https://pavloh.shinyapps.io/hrmR/ also on GitHub https://github.com/pavlohrab/hrmR
