@@ -1,5 +1,9 @@
 # PyHRM version 1.1 (russian adaptation)
-## North-Eastern Federal University in Yakutsk, Molecular Medicine and Human Genetics lab, Department of Proteomics and Gene Editing 
+
+#### affiliation:
+### North-Eastern Federal University in Yakutsk
+## Molecular Medicine and Human Genetics lab
+### Department of Proteomics and Gene Editing 
 
 High Resolution Melt Analysis in Python 
 
@@ -19,17 +23,17 @@ contributed by https://github.com/liuyigh/PyHRM
 # Issues solved in v1.1
 
 ## 1. Issues with delimiter on Russian CFX data
-### - delimiter set to ";"
+#### - delimiter set to ";"
 
 ## 2. Data type for pandas
-### - data type changed from "object" to "float"
+#### - data type changed from "object" to "float"
 
 ## 3. Issues with dots 
-### - comma is used as a decimal separator on Russian data sets instead of a point
+#### - comma is used as a decimal separator on Russian data sets instead of a point
 
-## FAQ
+### FAQ
 
-### Clustering not working.
+#### Clustering not working.
 
 When you get noisy data, the k-means is not going to magically salvage it. Try these:
 
@@ -39,9 +43,10 @@ When you get noisy data, the k-means is not going to magically salvage it. Try t
 * For subtle differences, your eyes can be better at pattern recognition than k-means. Use the provided code to plot it with `plot.ly`. You can look at individual lines on plot.ly to make your own judgement.
 * Reduce heat block variation by running only 1 target gene in symatrically arranged wells.
 
-## Reagents
+## Samples and reagents
 
-We are used SYBR Green reagents on our samples folder.
+We are used SYBR Green reagents on our samples
+Clinical demo data is collected by Medical Genetics Center in Yakutsk with patients of different hereditary pathologies
 
 ## qPCR protocol
 
@@ -49,8 +54,8 @@ PCR protocal is developing. There are evidence that incresing melting temperatur
 
 ## Other Software
 
-* Precision Melt from Bio-Rad: $3,455
-* GenEx: EUR€595 - 2,495
-* Life Technologies: $794, 1 license
+* Precision Melt from Bio-Rad: $ not supplied on the territory of Russia
+* GenEx: EUR€ not supplied on the territory of Russia
+* Life Technologies: $ not supplied on the territory of Russia
 * [uAnalyze](https://dna.utah.edu/uv/uanalyze.html): Does not support Bio-Rad CFX platforms, but if change csv file to tabular delimiter it should work fine
 * There is another HRM script on R to be investigated https://pavloh.shinyapps.io/hrmR/ also on GitHub https://github.com/pavlohrab/hrmR
